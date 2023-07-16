@@ -1,0 +1,22 @@
+{
+  "translation": {
+    "profile": "profil",
+    "result":"Ergebnis",
+    "SAVE MY PROFIL": "This line is translated",
+    "SELECT LANGUAGES": "This line is translated",
+    "register": "This line is translated",
+    "refresh": "This line is translated",
+    "firstname": "Vorname",
+    "familyname": "Nachname",
+    "born": "Geburtsort",
+    "street": "Strasse",
+    "postcode": "Plz",
+    "Phone": "Phone",
+    "birthdate": "Dob",
+    "Email": "Email",
+    "location": "Ort"
+  
+  }
+}
+
+ 
