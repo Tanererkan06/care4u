@@ -9,7 +9,7 @@ export default function TabFourScreen() {
 
     <View style={styles.container}>
       <ImageBackground source={require('../../images/background.jpg')} style={styles.image} >
-      <Text style={styles.title}>Tab One</Text>
+      <Text style={styles.title}>Tab Four</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <EditScreenInfo path="app/(tabs)/index.tsx" />
       </ImageBackground> 
