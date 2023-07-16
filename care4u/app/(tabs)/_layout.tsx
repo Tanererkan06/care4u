@@ -14,23 +14,33 @@ function TabBarIcon(props: {
 }
 
 
- 
+
 
 
 
 export default function TabLayout() {
-  const colorScheme = useColorScheme(); 
+  const colorScheme = useColorScheme();
   const styles = StyleSheet.create({
     image: {
       flex: 1,
+      flexDirection: 'column',
+      resizeMode: 'cover',
       justifyContent: "center",
       alignItems: 'center',
     },
-  
+
+
     container: {
       flex: 1,
       backgroundColor: 'white',
-  
+
+    },
+    text: {
+      color: 'white',
+      fontSize: 42,
+      fontWeight: 'bold',
+      textAlign: 'center',
+      backgroundColor: '#000000a0',
     },
     logo: {
       fontWeight: "bold",
@@ -70,61 +80,65 @@ export default function TabLayout() {
     }
   });
 
-  return (
-    <View style={styles.container}>
-      <Tabs
-        screenOptions={{
-          tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
-        }}>
-        <Tabs.Screen
-          name="index"
-          options={{
-            title: 'SingIn',
-            headerShown: false,tabBarShowLabel:false,
-            tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
-            headerRight: () => (
-              <Link href="/modal" asChild>
-                <Pressable>
-                  {({ pressed }) => (
-                    <FontAwesome
-                      name="info-circle"
-                      size={25}
-                      color={Colors[colorScheme ?? 'light'].text}
-                      style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
-                    />
-                  )}
-                </Pressable>
-              </Link>
-            ),
-          }}
-        />
-        <Tabs.Screen
-          name="two"
-          options={{
-            title: 'Settings',
-            headerShown: false,tabBarShowLabel:false,
-            tabBarIcon: ({ color }) => <TabBarIcon name="pencil" color={ color ? 'lightblue' : '#748c94'} />,
-          }}
-        />
-        <Tabs.Screen
-          name="three"
-          options={{
-            title: 'Register',
-            headerShown: false,tabBarShowLabel:false,
-            tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={ color ? 'lightblue' : '#748c94'}  />,
-          }}
-        />
-        <Tabs.Screen
-          name="four"
-          options={{
-            title: 'Product',
-            headerShown: false,tabBarShowLabel:false,
-            tabBarIcon: ({ color }) => <TabBarIcon name="file" color={ color ? 'lightblue' : '#748c94'}  />,
-          }}
-        />
+  return ( 
+    <View style={styles.container} >
+    {/*   <ImageBackground source={require('../../images/background.jpg')} style={styles.image} /> */}
+        <Tabs
+        /*  screenOptions={{
+           tabBarActiveTintColor: Colors[colorScheme ?? 'light'].tint,
+         }} */
+        >
+          <Tabs.Screen
+            name="one"
+            options={{
+              title: 'SingIn',
+              headerShown: false, tabBarShowLabel: false,
+              tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color ? 'lightblue' : '#748c94'} />,
+              headerRight: () => (
+                <Link href="/modal" asChild>
+                  <Pressable>
+                    {({ pressed }) => (
+                      <FontAwesome
+                        name="info-circle"
+                        size={25}
+                        color={Colors[colorScheme ?? 'light'].text}
+                        style={{ marginRight: 15, opacity: pressed ? 0.5 : 1 }}
+                      />
+                    )}
+                  </Pressable>
+                </Link>
+              ),
+            }}
+          />
+          <Tabs.Screen
+            name="two"
+            options={{
+              title: 'Settings',
+              headerShown: false, tabBarShowLabel: false,
+              tabBarIcon: ({ color }) => <TabBarIcon name="pencil" color={color ? 'lightblue' : '#748c94'} />,
+            }}
+          />
+          <Tabs.Screen
+            name="three"
+            options={{
+              title: 'Register',
+              headerShown: false, tabBarShowLabel: false,
+              tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color ? 'lightblue' : '#748c94'} />,
+            }}
+          />
+          <Tabs.Screen
+            name="four"
+            options={{
+              title: 'Product',
+              headerShown: false, tabBarShowLabel: false,
+              tabBarIcon: ({ color }) => <TabBarIcon name="file" color={color ? 'lightblue' : '#748c94'} />,
+            }}
+          />
 
-      </Tabs>
-    </View>
+        </Tabs>
+      </View>
+
+    
 
   );
 }
