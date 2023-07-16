@@ -6,6 +6,8 @@ import { useEffect } from 'react';
 import { useColorScheme } from 'react-native';
 //git rm -r --cached .
 // git temizle
+//git add .
+//git commit -m "fixed untracked files" 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
