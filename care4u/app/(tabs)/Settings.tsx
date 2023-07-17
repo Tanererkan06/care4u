@@ -4,14 +4,14 @@ import { StyleSheet, TextInput, TouchableOpacity, ImageBackground, Pressable, us
 import EditScreenInfo from '../../components/EditScreenInfo';
 import { Text, View } from '../../components/Themed';
 
-export default function TabThreeScreen() {
+export default function Settings() {
   return (
 
     <View style={styles.container}>
       <ImageBackground source={require('../../images/background.jpg')} style={styles.image} >
-      <Text style={styles.title}>Tab Three</Text>
+      <Text style={styles.title}>Settings</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <EditScreenInfo path="app/(tabs)/index.tsx" />
+           {/* <EditScreenInfo path="app/(tabs)/index.tsx" /> */}
       </ImageBackground> 
     </View>
   );

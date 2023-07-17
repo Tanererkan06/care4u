@@ -95,11 +95,10 @@ export default function TabLayout() {
        }} */
       >
         <Tabs.Screen
-          name="one"
+          name="Register"
           options={{
-            title: 'SingIn',
-            headerShown: true, 
-            tabBarShowLabel: false,
+            title: 'Register',
+            headerShown: false, tabBarShowLabel: false,
             tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color ? 'lightblue' : '#748c94'} />,
             headerRight: () => (
               <Link href="/modal" asChild>
@@ -118,27 +117,27 @@ export default function TabLayout() {
           }}
         />
         <Tabs.Screen
-          name="two"
+          name="Results"
           options={{
-            title: 'Settings',
+            title: 'Results',
             headerShown: false, tabBarShowLabel: false,
             tabBarIcon: ({ color }) => <TabBarIcon name="pencil" color={color ? 'lightblue' : '#748c94'} />,
           }}
         />
-        <Tabs.Screen
-          name="three"
+       <Tabs.Screen
+          name="Products"
           options={{
-            title: 'Register',
-            headerShown: false, tabBarShowLabel: false,
-            tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color ? 'lightblue' : '#748c94'} />,
-          }}
-        />
-        <Tabs.Screen
-          name="four"
-          options={{
-            title: 'Product',
+            title: 'Products',
             headerShown: false, tabBarShowLabel: false,
             tabBarIcon: ({ color }) => <TabBarIcon name="file" color={color ? 'lightblue' : '#748c94'} />,
+          }}
+        />  
+        <Tabs.Screen
+          name="Settings"
+          options={{
+            title: 'Settings',
+            headerShown: false, tabBarShowLabel: false,
+            tabBarIcon: ({ color }) => <TabBarIcon name="cog" color={color ? 'lightblue' : '#748c94'} />,
           }}
         />
 
