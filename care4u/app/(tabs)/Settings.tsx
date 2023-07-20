@@ -1,5 +1,5 @@
 import React, { useEffect, useState, useCallback } from 'react';
-import { ActivityIndicator, FlatList, StyleSheet, Dimensions, Image, TouchableOpacity, ImageBackground, Button, TextInput, Pressable, useColorScheme  } from 'react-native';
+import { ActivityIndicator, FlatList, StyleSheet, Dimensions, Image, TouchableOpacity, ImageBackground, Button, TextInput, Pressable, useColorScheme,LogBox  } from 'react-native';
 
 
 import EditScreenInfo from '../../components/EditScreenInfo';
